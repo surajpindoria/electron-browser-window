@@ -5,7 +5,6 @@ let callerWindow;
 
 ipc.on('compute-primes', function(event, fromWindowId) {
     const fromWindow = BrowserWindow.fromId(fromWindowId);
-    console.log('*** worker.js');
 
     let n = 1;
     while (true) {

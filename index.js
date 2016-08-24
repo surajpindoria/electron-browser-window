@@ -21,13 +21,10 @@ buttonNoWindow.onclick = function() {
 };
 
 buttonWindow.onclick = function() {
-    console.log('*** click');
-
     let workerPath = 'file://' + path.join(__dirname, '/worker.html');
 
     workerWindow = new BrowserWindow({ width: 400, height: 400, show: false });
     workerWindow.loadURL(workerPath);
-    workerWindow.openDevTools();
 
     workerWindow.webContents.on('did-finish-load', function() {
         workerWindow.webContents.send('compute-primes', myWindowId);
