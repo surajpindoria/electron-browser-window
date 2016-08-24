@@ -17,5 +17,7 @@ ipc.on('compute-primes', function(event, fromWindowId) {
         }
         // found a prime!
         console.log(n);
+        fromWindow.webContents.send('got-prime',n);
+
     }
 });
