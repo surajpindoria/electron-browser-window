@@ -36,3 +36,7 @@ buttonWindow.onclick = function() {
 ipcRenderer.on('window-id', function(event, id) {
     myWindowId = id;
 });
+
+ipcRenderer.on('got-prime', function(event, prime) {
+   console.log("prime " + prime);
+});
