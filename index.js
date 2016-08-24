@@ -8,6 +8,7 @@ let myWindowId;
 let workerWindow;
 
 buttonNoWindow.onclick = function() {
+    let n = 1;
     while (true) {
         n += 1;
         for (let i = 2; i <= Math.sqrt(n); i += 1) {
